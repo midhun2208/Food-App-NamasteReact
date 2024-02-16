@@ -1,0 +1,20 @@
+{
+  "name": "foodordering-app",
+  "version": "1.0.0",
+  "description": "Food ordering app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jezt",
+    "start": "npx parcel index.html"
+  },
+  "author": "Midhun",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
