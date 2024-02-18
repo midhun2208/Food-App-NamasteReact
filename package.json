@@ -2,7 +2,6 @@
   "name": "foodordering-app",
   "version": "1.0.0",
   "description": "Food ordering app",
-  "main": "App.js",
   "scripts": {
     "test": "jezt",
     "start": "npx parcel index.html"
