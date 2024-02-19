@@ -30,3 +30,15 @@ Footer
     import {Component} from "path"
 
 - Named and Defualt exports can be done in the same Component
+
+# React Hooks
+
+- They are normal JS utility Function - they are prebuild 
+Important Hooks
+    -useState() - Superpowerful State Variables in React
+                    Manintains state of your component
+                    const = [] = useState()
+
+                - Modify
+                    useing the set function in the state Hook 
+    -useEffect()
