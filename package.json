@@ -4,7 +4,8 @@
   "description": "Food ordering app",
   "scripts": {
     "test": "jezt",
-    "start": "npx parcel index.html"
+    "start": "npx parcel index.html",
+    "build":"npx parcel build index.html"
   },
   "author": "Midhun",
   "license": "ISC",
