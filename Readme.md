@@ -18,3 +18,15 @@ Footer
     - contact
 
 */
+
+# Two types of exports/Imports
+
+-Defualt Export/ Import 
+    export defaults Component
+    import Component from "path"
+
+- Named Export/Import
+    export const Component;
+    import {Component} from "path"
+
+- Named and Defualt exports can be done in the same Component

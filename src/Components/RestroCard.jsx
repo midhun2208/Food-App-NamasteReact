@@ -1,4 +1,4 @@
-import { CDN_URL } from "../Utils/Constans";
+import { CDN_URL}  from "../Utils/Constans";
 
 const RestroCard = (props) => {
   const { resData } = props;
