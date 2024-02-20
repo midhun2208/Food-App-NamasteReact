@@ -1,4 +1,3 @@
-import resObject from "../Utils/mockData";
 import RestroCard from "./RestroCard";
 import { useState } from "react";
 import resList from "../Utils/mockData";

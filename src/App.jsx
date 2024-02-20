@@ -6,7 +6,6 @@ import Body from "./Components/Body";
 // not using keys(not recommened) <<<<<<< index as a key <<<<<<<< unique id (best parctice)
 
 
-
 const AppLayout = () => {
   return (
     <div className="App">
