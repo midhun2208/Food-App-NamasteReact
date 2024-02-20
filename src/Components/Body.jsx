@@ -1,16 +1,35 @@
 import RestroCard from "./RestroCard";
-import { useState } from "react";
-import resList from "../Utils/mockData";
+import { useState, useEffect } from "react";
+import { FETCH_URL } from "../Utils/Constans";
+import Shimmer from "./Shimmer";
+
 
 const Body = () => {
   //local State Variable - Super powerful variable
 
-  const [listOfRest, setListOfRest] = useState(
-resList
-  );
+  const [listOfRest, setListOfRest] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(
+      FETCH_URL
+    );
+    const json = await data.json();
+    console.log(json.data.cards[4]);
+    setListOfRest(
+      //Optional Channing
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+  };
+
+if(listOfRest.length == 0 ){
+  return <Shimmer/>
+}
 
   // Normal Js Valirable
-
 
   return (
     <div className="body">
@@ -18,9 +37,10 @@ resList
         <button
           className="filter-btn"
           onClick={() => {
-           const filteredList = resList.filter((res)=>(res.info.avgRating > 4.5
-           ))
-           setListOfRest(filteredList)
+            const filteredList = listOfRest.filter(
+              (res) => res.info.avgRating > 4.3
+            );
+            setListOfRest(filteredList);
           }}
         >
           {" "}
@@ -30,7 +50,7 @@ resList
       <div className="res-container">
         {/* Restro Card */}
         {listOfRest.map((resturant) => (
-          <RestroCard key={resturant.info.id} resData={resturant} />
+          <RestroCard key={resturant.id} resData={resturant} />
         ))}
       </div>
     </div>

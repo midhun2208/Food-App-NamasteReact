@@ -48,3 +48,9 @@ import Component from "path"
   - Is a technique that come up in React 16 that finds a new for findin the diff & updating the DOM
 - Reconciliation
   - The algorithem React use to find the diff in one tree with the another to determine which part need to be changed
+
+# Optional Channning
+ -setListOfRest(
+      //Optional Channing
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );  
