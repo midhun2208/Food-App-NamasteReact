@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { FETCH_URL } from "../Utils/Constans";
 import Shimmer from "./Shimmer";
 
-
 const Body = () => {
   //local State Variable - Super powerful variable
 
@@ -14,24 +13,21 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      FETCH_URL
-    );
+    const data = await fetch(FETCH_URL);
     const json = await data.json();
-    console.log(json.data.cards[4]);
     setListOfRest(
       //Optional Channing
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
-if(listOfRest.length == 0 ){
-  return <Shimmer/>
-}
+  //Contitional Rendering
 
   // Normal Js Valirable
 
-  return (
+  return listOfRest.length == 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <button
@@ -50,7 +46,7 @@ if(listOfRest.length == 0 ){
       <div className="res-container">
         {/* Restro Card */}
         {listOfRest.map((resturant) => (
-          <RestroCard key={resturant.id} resData={resturant} />
+          <RestroCard key={resturant.info.id} resData={resturant} />
         ))}
       </div>
     </div>
