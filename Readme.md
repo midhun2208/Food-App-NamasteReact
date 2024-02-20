@@ -28,13 +28,16 @@ import Component from "path"
 
 - They are normal JS utility Function - they are prebuild
   Important Hooks
-  -useState() - Superpowerful State Variables in React
+  useState() - Superpowerful State Variables in React
   Manintains state of your component
-  const = [] = useState() - Whenever a state varible is updated the component re-renders its self
+  const = [] = useState() - Whenever a state varible is updated the react re-renders the component
 
                   - Modify
                       useing the set function in the state Hook
       -useEffect()
+        - It  is also  a utility function by react . The useEffect works only after the body is renderd
+        - It takes two arguments one is Callback() arrow funtion
+                                  2) is  a dependency array
 
 # Why React is Fast
 
@@ -50,7 +53,16 @@ import Component from "path"
   - The algorithem React use to find the diff in one tree with the another to determine which part need to be changed
 
 # Optional Channning
- -setListOfRest(
-      //Optional Channing
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );  
+
+-setListOfRest(
+//Optional Channing
+json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+);
+
+# Shimmer UI
+
+is a UI that show in the loading tym of the page
+
+# Conditional Rendering
+
+when a component renders on a condition is called conditional rendereing

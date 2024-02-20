@@ -76,4 +76,12 @@
     margin-right: 10px;
 }
 
+.filter{
+    display: flex;
+}
+
+.search{
+    margin: 10px;
+}
+
 

@@ -8,6 +8,12 @@ const Body = () => {
 
   const [listOfRest, setListOfRest] = useState([]);
 
+  const [filerRest, setFilterRest] = useState([]);
+
+  const [searchRest, setSearchRest] = useState("");
+
+  // Whenever a state varible is triggered the react re-renders the component
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -17,6 +23,9 @@ const Body = () => {
     const json = await data.json();
     setListOfRest(
       //Optional Channing
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilterRest(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
@@ -30,13 +39,33 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input
+            type="text"
+            className="search-box"
+            value={searchRest}
+            onChange={(e) => setSearchRest(e.target.value)}
+          />
+          <button
+            onClick={() => {
+              const filterSearch = listOfRest.filter((res) =>
+                res.info.name.toLowerCase().includes(searchRest.toLowerCase())
+              );
+              setFilterRest(filterSearch);
+            }}
+          >
+            search
+          </button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
+            
             const filteredList = listOfRest.filter(
               (res) => res.info.avgRating > 4.3
             );
-            setListOfRest(filteredList);
+            setFilterRest(filteredList);
+           
           }}
         >
           {" "}
@@ -45,7 +74,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {/* Restro Card */}
-        {listOfRest.map((resturant) => (
+        {filerRest.map((resturant) => (
           <RestroCard key={resturant.info.id} resData={resturant} />
         ))}
       </div>
