@@ -60,12 +60,10 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            
             const filteredList = listOfRest.filter(
               (res) => res.info.avgRating > 4.3
             );
             setFilterRest(filteredList);
-           
           }}
         >
           {" "}
