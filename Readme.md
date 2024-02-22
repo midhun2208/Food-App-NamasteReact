@@ -68,8 +68,15 @@ is a UI that show in the loading tym of the page
 when a component renders on a condition is called conditional rendereing\
 
 # useEffect
- When the useEffect is rendered 
-  - if the useEffect doesnt have a  dependency array the useEffect will render in the every render of the component
-  - if the useEFfect has When ever the component is intialy rendered the useEffect is called one in The intial Render
-  - if the dependency array has a "button state"  when ever the button is triggerred then the useEffect is called rendered
-  
+
+When the useEffect is rendered
+
+- if the useEffect doesnt have a dependency array the useEffect will render in the every render of the component
+- if the useEFfect has When ever the component is intialy rendered the useEffect is called one in The intial Render
+- if the dependency array has a "button state" when ever the button is triggerred then the useEffect is called rendered
+
+# 2 Types of ROuting
+
+- Server side Routing - where makes a network call and gives the  UI refresing the whole page  multipage is used 
+
+- Client Side Routing - NO network call is making to get the UI the coponents interchange 
