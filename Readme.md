@@ -90,3 +90,8 @@ When the useEffect is rendered
 - Dynamic route using 
 
 # useParams( ) - we can fetch the data from the url
+
+# Components
+ - Class based Componets - Class based components are normal JavaScript class that have render() method which returns some JSX
+ - Functional Based Componets - are JavaScript function that return some piece of JSX
+
