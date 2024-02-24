@@ -83,15 +83,20 @@ When the useEffect is rendered
 
 # createBrowserRouter,
 
-- Outlet - used to replace between the component uses the  "children" for the Outlet replace where we write the path and the element or to replace the outlet
+- Outlet - used to replace between the component uses the "children" for the Outlet replace where we write the path and the element or to replace the outlet
 - RouterProvider - where we write
   root.render(<RouterProvider router={appRouter} />);
 - useRouteError - For error handling
-- Dynamic route using 
+- Dynamic route using
 
 # useParams( ) - we can fetch the data from the url
 
 # Components
- - Class based Componets - Class based components are normal JavaScript class that have render() method which returns some JSX
- - Functional Based Componets - are JavaScript function that return some piece of JSX
 
+- Class based Componets - Class based components are normal JavaScript class that have render() method which returns some JSX
+
+  - props:
+    By calling super(props), you ensure that the parent class's constructor is executed with the provided props
+    Always use "this" keyword inthe class "this.props.name"
+
+- Functional Based Componets - are JavaScript function that return some piece of JSX

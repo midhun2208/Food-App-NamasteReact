@@ -7,9 +7,9 @@ const About = () => {
       <h1>About</h1>
       <h2>Namaste React Web series</h2>
       {/* passing props */}
-      <User name = {'Midhun P M'} />
+      <User name = {'Midhun P M (function)'} />
 
-      <UserClass/>
+      <UserClass name={"Midhun P M (class)"} location={"Kerala (class)"}/>
     </div>
   );
 };
