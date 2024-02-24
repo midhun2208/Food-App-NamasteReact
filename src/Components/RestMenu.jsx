@@ -1,42 +1,51 @@
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
+import { useParams } from "react-router-dom";
+import { MENU_API } from "../Utils/Constans";
 
 const RestMenu = () => {
   const [restInfo, setRestInfo] = useState(null);
+
+  const { resId } = useParams();
 
   useEffect(() => {
     fetchMenu();
   }, []);
 
   const fetchMenu = async () => {
-    const data = await fetch(
-      `https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=67378&submitAction=ENTER`
-    );
+    const data = await fetch(MENU_API + resId);
     const json = await data.json();
     setRestInfo(json.data);
-    console.log(restInfo);
   };
-  console.log(restInfo?.cards[4]?.groupedCard?.cardGroupMap.REGULAR.cards[2]);
-  //   const { name, cuisines, costForTwoMessage } =
-  //     restInfo?.cards[2]?.card?.card?.info;
+
+  if (restInfo === null) return <Shimmer />;
+
+  console.log(
+    restInfo?.cards[4]?.groupedCard?.cardGroupMap.REGULAR.cards[4].card.card
+  );
+  const { name, cuisines, costForTwoMessage } =
+    restInfo?.cards[2]?.card?.card?.info;
+
+  const { itemCards } =
+    restInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card
+      ?.card;
+
+  console.log(itemCards);
 
   return (
     <div>
-      {/* <h1>{name}</h1>
+      <h1>{name}</h1>
       <p>
         {cuisines.join(", ")} : {costForTwoMessage}
       </p>
-      <h2>Menu</h2> */}
-
-      {/* {restInfo.map((item) => (
-        <ul>
-          <li></li>
-        </ul>
-      ))} */}
-
+      <h2>Menu</h2>
       <ul>
-        <li>Biriyani</li>
-        <li>Burger</li>
-        <li>Coke</li>
+        {itemCards?.map((item) => (
+          <li key={item.card.info.id}>
+            {item.card.info.name}- Rs.
+            {item.card.info.defaultPrice / 100 || item.card.info.price / 100}
+          </li>
+        ))}
       </ul>
     </div>
   );

@@ -2,7 +2,6 @@ import { CDN_URL } from "../Utils/Constans";
 
 const RestroCard = (props) => {
   const { resData } = props;
-
   const {
     cloudinaryImageId,
     name,
@@ -11,6 +10,7 @@ const RestroCard = (props) => {
 
     costForTwo,
   } = resData.info;
+ 
 
   const { deliveryTime } = resData.info.sla;
 

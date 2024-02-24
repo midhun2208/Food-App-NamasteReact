@@ -77,6 +77,16 @@ When the useEffect is rendered
 
 # 2 Types of ROuting
 
-- Server side Routing - where makes a network call and gives the  UI refresing the whole page  multipage is used 
+- Server side Routing - where makes a network call and gives the UI refresing the whole page multipage is used
 
-- Client Side Routing - NO network call is making to get the UI the coponents interchange 
+- Client Side Routing - NO network call is making to get the UI the coponents interchange
+
+# createBrowserRouter,
+
+- Outlet - used to replace between the component uses the  "children" for the Outlet replace where we write the path and the element or to replace the outlet
+- RouterProvider - where we write
+  root.render(<RouterProvider router={appRouter} />);
+- useRouteError - For error handling
+- Dynamic route using 
+
+# useParams( ) - we can fetch the data from the url
