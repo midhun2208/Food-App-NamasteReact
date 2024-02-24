@@ -20,9 +20,7 @@ const RestMenu = () => {
 
   if (restInfo === null) return <Shimmer />;
 
-  console.log(
-    restInfo?.cards[4]?.groupedCard?.cardGroupMap.REGULAR.cards[4].card.card
-  );
+ 
   const { name, cuisines, costForTwoMessage } =
     restInfo?.cards[2]?.card?.card?.info;
 
@@ -30,7 +28,7 @@ const RestMenu = () => {
     restInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card
       ?.card;
 
-  console.log(itemCards);
+  
 
   return (
     <div>

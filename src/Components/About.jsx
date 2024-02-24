@@ -1,8 +1,11 @@
+import User from "./User";
+
 const About = () => {
   return (
-    <div>
+    <div >
       <h1>About</h1>
       <h2>Namaste React Web series</h2>
+      <User/>
     </div>
   );
 };
