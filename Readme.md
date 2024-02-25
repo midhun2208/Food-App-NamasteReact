@@ -100,8 +100,23 @@ When the useEffect is rendered
     Always use "this" keyword inthe class "this.props.name"
 
   - state in class component
-    -By using 'this.state' in the consturctor and if we want to 
+    -By using 'this.state' in the consturctor and if we want to
     -use the state in classs
-      bt using 'this.state.stateName' or we can destructure and use 
+    bt using 'this.state.stateName' or we can destructure and use
+    - Updateing a value in the class component the state name is count
+      this.setState({
+      count:this.state.count +1
+      })
 
 - Functional Based Componets - are JavaScript function that return some piece of JSX
+
+# life Cycle of React
+
+- Parent Constructor
+- Parent Render
+- Child Constructor
+- Child Render
+- Child componentDidMOunt
+- Parent componentDidMount
+
+componentDidMount is used for Api calls in the class Component
