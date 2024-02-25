@@ -99,4 +99,9 @@ When the useEffect is rendered
     By calling super(props), you ensure that the parent class's constructor is executed with the provided props
     Always use "this" keyword inthe class "this.props.name"
 
+  - state in class component
+    -By using 'this.state' in the consturctor and if we want to 
+    -use the state in classs
+      bt using 'this.state.stateName' or we can destructure and use 
+
 - Functional Based Componets - are JavaScript function that return some piece of JSX
