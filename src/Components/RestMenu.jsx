@@ -18,14 +18,14 @@ const RestMenu = () => {
     setRestInfo(json.data);
   };
 
-  if (restInfo === null) return <Shimmer />;
+  if (restInfo === null) return( <Shimmer />);
 
  
   const { name, cuisines, costForTwoMessage } =
-    restInfo?.cards[2]?.card?.card?.info;
+    restInfo?.cards[0]?.card?.card?.info;
 
   const { itemCards } =
-    restInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card
+    restInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card
       ?.card;
 
   
