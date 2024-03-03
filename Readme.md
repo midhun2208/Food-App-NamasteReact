@@ -165,3 +165,11 @@ then calls the componentDidUpdate
 # Unmounting
 
 after the component is fully changed to the next before the component is been changes the componentWillUnmount is called
+
+# Optimizing the app
+
+Chunking - making the code into different bundlers to optimize the app and to load in a diiferent js file
+Dynamic binding - binding Dynamically
+CodeSplitting
+Lazy loading - loading the component bubler when on it demands in the loading it helps in the production of the large scale to optimize and get efficent in loading the compoenets
+Demand Loading - Loading only when it is needed
