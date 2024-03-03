@@ -120,30 +120,48 @@ When the useEffect is rendered
 - Parent componentDidMount
 
 componentDidMount is used for Api calls in the class Component
-- to quickly render the page and make the API call and fill the data to the rendered data and re render it 
+
+- to quickly render the page and make the API call and fill the data to the rendered data and re render it
 - Like useEffect in thefunctional Component
 
-  when ever the multiple child component is being there the react optimize the code and 
-    after the parent render the both child constructor and the render will be called and after that only the
-    componentDid Mount of the both child will be called
-<!--     
-    - Parent Constructor
-    - Parent Render
+  when ever the multiple child component is being there the react optimize the code and
+  after the parent render the both child constructor and the render will be called and after that only the
+  componentDid Mount of the both child will be called
+  <!--     
+      - Parent Constructor
+      - Parent Render
+  
+      - First Constructor
+      - First Render
+  
+      - Second Constructor
+      - Second Render
 
-    - First Constructor
-    - First Render
+## Dom Is Updated
 
-    - Second Constructor
-    - Second Render
-
-Dom Is Updated 
----------------
     - First componentDidMOunt
     - Second componentDidMOunt
 
     - Parent componentDidMount   -->
 
-    there are 2 phases 1) Render Phase  
+    there are 2 phases 1) Render Phase
                        2) Commite Phase
-                       they the 1st all will be rendered and then only they commit the changes in the  dom thats why the 
+                       they the 1st all will be rendered and then only they commit the changes in the  dom thats why the
                        componentDidMount Came last  The React really Optimizes the code
+
+# MOunting Phase
+
+Constructor(dummy data)
+render(dummy)
+Calls the componentDidMount and calls the api and fetchsit
+
+# Updating
+
+after the api call the setState is called and the states are set with values
+when the render happens in the render phase they reconcilation process will happen
+and the Dom finds the diff and Updates the dom
+then calls the componentDidUpdate
+
+# Unmounting
+
+after the component is fully changed to the next before the component is been changes the componentWillUnmount is called
