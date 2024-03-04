@@ -17,14 +17,14 @@ const RestMenu = () => {
 
   return (
     <div>
-      <h1>{name}</h1>
-      <p>
+      <h1 className="font-bold py-3 text-3xl">{name}</h1>
+      <p className="text-xl my-2">
         {cuisines.join(", ")} : {costForTwoMessage}
       </p>
-      <h2>Menu</h2>
+      <h2 className="text-2xl my-2 font-bold ">Menu</h2>
       <ul>
         {itemCards?.map((item) => (
-          <li key={item.card.info.id}>
+          <li key={item.card.info.id} className="text-xl my-2">
             {item.card.info.name}- Rs.
             {item.card.info.defaultPrice / 100 || item.card.info.price / 100}
           </li>
