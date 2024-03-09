@@ -1,6 +1,7 @@
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestMenu from "../Utils/useRestMenu";
+import ResturantCategory from "./ResturantCategory";
 
 const RestMenu = () => {
   const { resId } = useParams();
@@ -15,21 +16,26 @@ const RestMenu = () => {
     restInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card
       ?.card;
 
+  // console.log(restInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+// for the category like recommed and all  filterMethod
+  const category =
+    restInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
+  // console.log(category);
+
   return (
-    <div>
-      <h1 className="font-bold py-3 text-3xl">{name}</h1>
-      <p className="text-xl my-2">
+    <div className="text-center">
+      <h1 className="font-bold text-3xl my-9">{name}</h1>
+      <p className="font-bold text-2xl mb-4">
         {cuisines.join(", ")} : {costForTwoMessage}
       </p>
-      <h2 className="text-2xl my-2 font-bold ">Menu</h2>
-      <ul>
-        {itemCards?.map((item) => (
-          <li key={item.card.info.id} className="text-xl my-2">
-            {item.card.info.name}- Rs.
-            {item.card.info.defaultPrice / 100 || item.card.info.price / 100}
-          </li>
-        ))}
-      </ul>
+      {
+        category.map((category,index)=>(<ResturantCategory key={index+1} data={category?.card?.card}/>))
+      }
+     
     </div>
   );
 };
