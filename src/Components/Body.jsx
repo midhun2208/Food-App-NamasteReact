@@ -1,4 +1,4 @@
-import RestroCard from "./RestroCard";
+import RestroCard, {withOpenTag} from "./RestroCard";
 import { useState, useEffect } from "react";
 import { FETCH_URL } from "../Utils/Constans";
 import Shimmer from "./Shimmer";
@@ -12,6 +12,10 @@ const Body = () => {
   const [filerRest, setFilterRest] = useState([]);
 
   const [searchRest, setSearchRest] = useState("");
+
+  console.log(listOfRest);
+
+  const RestroCardWithOpen = withOpenTag(RestroCard);
 
   // Whenever a state varible is triggered the react re-renders the component
 
@@ -79,7 +83,11 @@ const Body = () => {
         {/* Restro Card */}
         {filerRest.map((resturant) => (
           <Link key={resturant.info.id} to={`/resturants/${resturant.info.id}`}>
-            <RestroCard resData={resturant} />
+            {
+              resturant?.info?.veg ? <RestroCardWithOpen resData={resturant} />:<RestroCard resData={resturant} />
+            }
+
+            
           </Link>
         ))}
       </div>

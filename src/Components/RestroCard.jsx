@@ -10,12 +10,11 @@ const RestroCard = (props) => {
 
     costForTwo,
   } = resData.info;
- 
 
   const { deliveryTime } = resData.info.sla;
 
   return (
-    <div className="m-4 p-4 w-[270px] rounded-lg bg-gray-100 hover:bg-gray-300" >
+    <div className="m-4 p-4 w-[270px] rounded-lg bg-gray-100 hover:bg-gray-300">
       <img
         src={CDN_URL + cloudinaryImageId}
         alt="res-logo"
@@ -28,6 +27,15 @@ const RestroCard = (props) => {
       <h4>{costForTwo} </h4>
     </div>
   );
+};
+
+export const withOpenTag = (RestroCard) => {
+  return (props) => {
+    return (<>
+    <label className="absolute bg-green-500 text-white p-1 mt-2 rounded-lg ml-3 font-medium w-12 text-center">Veg</label>
+    <RestroCard {...props}/>
+    </>);
+  };
 };
 
 export default RestroCard;
