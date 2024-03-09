@@ -1,9 +1,11 @@
+import { useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestMenu from "../Utils/useRestMenu";
 import ResturantCategory from "./ResturantCategory";
 
 const RestMenu = () => {
+  const [showIndex, setShowIndex] = useState(null);
   const { resId } = useParams();
   const restInfo = useRestMenu(resId);
 
@@ -17,7 +19,7 @@ const RestMenu = () => {
       ?.card;
 
   // console.log(restInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-// for the category like recommed and all  filterMethod
+  // for the category like recommed and all  filterMethod
   const category =
     restInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
@@ -32,10 +34,14 @@ const RestMenu = () => {
       <p className="font-bold text-2xl mb-4">
         {cuisines.join(", ")} : {costForTwoMessage}
       </p>
-      {
-        category.map((category,index)=>(<ResturantCategory key={index+1} data={category?.card?.card}/>))
-      }
-     
+      {category.map((category, index) => (
+        <ResturantCategory
+          key={index}
+          data={category?.card?.card}
+          setShowIndex={() => setShowIndex(index)}
+          showItem={index === showIndex ? true : false}
+        />
+      ))}
     </div>
   );
 };

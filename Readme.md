@@ -173,3 +173,11 @@ Dynamic binding - binding Dynamically
 CodeSplitting
 Lazy loading - loading the component bubler when on it demands in the loading it helps in the production of the large scale to optimize and get efficent in loading the compoenets
 Demand Loading - Loading only when it is needed
+
+# Higher Order Components
+One component that takes a compoenent and enhance the compoenet and returns the enhanced component
+
+# Controlled And UnControlled Components
+  When the component have its own state then the Component is called UnControlled Component
+
+  when the parent component have the state management of the Child component then it is called a controlled Component(child)
