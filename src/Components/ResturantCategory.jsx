@@ -6,7 +6,7 @@ const ResturantCategory = ({ data, showItem, setShowIndex }) => {
   // console.log(data);
   const handleClick = ()=>{
     setShowIndex ()
-   
+   showItem = !showItem
   }
 
   return (

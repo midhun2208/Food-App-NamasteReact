@@ -1,7 +1,7 @@
 import { CDN_URL } from "../Utils/Constans";
 
 const ItemList = ({ items }) => {
-//   console.log(items);
+  //   console.log(items);
 
   if (items.length === 0) return <></>;
 
@@ -26,9 +26,9 @@ const ItemList = ({ items }) => {
             </div>
 
             <div className="w-3/12 py-2">
-              <div className="absolute mx-11 mt-[102px]">
-                <button className="p-2 bg-white text-green-500 rounded-lg shadow-md">
-                  Add +
+              <div className="absolute mx-8 mt-[102px]">
+                <button className="p-2 px-5 bg-white text-green-500 rounded-lg shadow-md">
+                  ADD
                 </button>
               </div>
               <img
@@ -38,7 +38,7 @@ const ItemList = ({ items }) => {
                     : ""
                 }
                 alt=""
-                className="w-54 h-36"
+                className="min-w-54 h-36 rounded-lg"
               />
             </div>
           </div>
