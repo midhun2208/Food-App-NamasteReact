@@ -1,8 +1,9 @@
-import RestroCard, {withOpenTag} from "./RestroCard";
-import { useState, useEffect } from "react";
+import RestroCard, { withOpenTag } from "./RestroCard";
+import { useState, useEffect, useContext } from "react";
 import { FETCH_URL } from "../Utils/Constans";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import UserContext from "../Utils/UserContext";
 
 const Body = () => {
   //local State Variable - Super powerful variable
@@ -13,9 +14,11 @@ const Body = () => {
 
   const [searchRest, setSearchRest] = useState("");
 
-  console.log(listOfRest);
+  // console.log(listOfRest);
 
   const RestroCardWithOpen = withOpenTag(RestroCard);
+
+  const {loggedInUser, setUserName} = useContext(UserContext)
 
   // Whenever a state varible is triggered the react re-renders the component
 
@@ -61,7 +64,6 @@ const Body = () => {
           >
             search
           </button>
-         
         </div>
         <div className=" m-4 p-4 items-center flex">
           <button
@@ -77,17 +79,21 @@ const Body = () => {
             Top Rated Resturant
           </button>
         </div>
-       
+
+        <div className=" m-4 p-4 items-center flex">
+          <label htmlFor="" > User Name: &nbsp;</label>
+          <input type="text" className="p-2 border border-black" value={loggedInUser} onChange={(e)=>setUserName(e.target.value)}/>
+        </div>
       </div>
       <div className="res-container flex flex-wrap">
         {/* Restro Card */}
         {filerRest.map((resturant) => (
           <Link key={resturant.info.id} to={`/resturants/${resturant.info.id}`}>
-            {
-              resturant?.info?.veg ? <RestroCardWithOpen resData={resturant} />:<RestroCard resData={resturant} />
-            }
-
-            
+            {resturant?.info?.veg ? (
+              <RestroCardWithOpen resData={resturant} />
+            ) : (
+              <RestroCard resData={resturant} />
+            )}
           </Link>
         ))}
       </div>

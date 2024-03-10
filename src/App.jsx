@@ -1,13 +1,12 @@
-import React,{lazy, Suspense} from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestMenu from "./Components/RestMenu";
-
+import UserContext from "./Utils/UserContext";
 
 // not using keys(not recommened) <<<<<<< index as a key <<<<<<<< unique id (best parctice)
 
@@ -15,16 +14,32 @@ import RestMenu from "./Components/RestMenu";
 //Dynamic binding - binding Dynamically
 // CodeSplitting
 //Lazy loading - loading the component bubler when on it demands  in  the loading it helps in the production of the large scale to optimize and get efficent in loading the compoenets
-//Demand Loading - Loading only when it is needed 
+//Demand Loading - Loading only when it is needed
 
-  const Grocery = lazy(()=>import("./Components/Grocery")) 
+const Grocery = lazy(() => import("./Components/Grocery"));
+
+const About = lazy(()=>import("./Components/About"));
+
+
 
 const AppLayout = () => {
+
+  const [userName,setUserName] = useState()
+  useEffect(() => {
+    const data = {
+      name:"Midhun P M"
+    }
+    setUserName(data.name)
+  }, []);
+
   return (
-    <div className="App">
-      <Header />
-      <Outlet />
-    </div>
+    // the conetxt dependes upon where we are using or wrapping the things
+    <UserContext.Provider value={{ loggedInUser: userName, setUserName}}>
+      <div className="App">
+        <Header />
+        <Outlet />
+      </div>
+    </UserContext.Provider>
   );
 };
 
@@ -40,13 +55,19 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element:(
+          <Suspense fallback={<h1>loading</h1>}>
+             <About />
+          </Suspense>
+        ),
       },
       {
         path: "/grocery",
-        element: <Suspense fallback={<h1>loading</h1>}>
-          <Grocery />
-          </Suspense>,
+        element: (
+          <Suspense fallback={<h1>loading</h1>}>
+            <Grocery />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",

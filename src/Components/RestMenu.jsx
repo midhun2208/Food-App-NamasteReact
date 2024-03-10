@@ -29,6 +29,7 @@ const RestMenu = () => {
 
     const handleChange = (index) => {
       setShowIndex((prevIndex) => (prevIndex === index ? null : index));
+     
     };
   // console.log(category);
 
@@ -40,7 +41,7 @@ const RestMenu = () => {
       </p>
       {category.map((category, index) => (
         <ResturantCategory
-          key={index}
+          key={category?.card?.card.title}
           data={category?.card?.card}
           setShowIndex={() => handleChange(index)}
           showItem={index === showIndex ? true :false}

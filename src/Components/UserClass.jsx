@@ -3,34 +3,29 @@ import React from "react";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
-     console.log(this.props.name+"Child Constructor");
+    //  console.log(this.props.name+"Child Constructor");
 
     this.state = {
-      userInfo:{
-         
-      }
+      userInfo: {},
     };
   }
 
-  async componentDidMount(){
-     console.log(this.props.name+"Child ComponentDidMount");
-    const data = await fetch('https://api.github.com/users/midhun2208')
-    const json = await data.json()
+  async componentDidMount() {
+    //  console.log(this.props.name+"Child ComponentDidMount");
+    const data = await fetch("https://api.github.com/users/midhun2208");
+    const json = await data.json();
 
-    
     this.setState({
-      userInfo:json
-    })
-
+      userInfo: json,
+    });
   }
-  componentDidUpdate(){
-    console.log("DidUpdate");
+  componentDidUpdate() {
+    // console.log("DidUpdate");
   }
 
   render() {
-     console.log(this.props.name+"Child Render");
-    const { name, location,avatar_url } = this.state.userInfo;
- 
+    //  console.log(this.props.name+"Child Render");
+    const { name, location, avatar_url } = this.state.userInfo;
 
     return (
       <div className="user-card">
