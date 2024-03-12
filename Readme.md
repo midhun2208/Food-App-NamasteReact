@@ -214,26 +214,27 @@ in the COntext there is a provider with that we cann update the value in the Con
 # React-Redux
 
 1. We want to install the libarary @redux/toolkil and react-redux
-   npm i @reduxjs/toolkit , npm i react-redux
-    2) Build Our store using the configureStore ({})
-     3) then we will provide it by using the <Provider store={appStore}></Provider>
+   npm i @reduxjs/toolkit , npm i react-redux 2) Build Our store using the configureStore ({}) 3) then we will provide it by using the <Provider store={appStore}></Provider>
 
-     4) we will create  a slice 
-        create using createSlice from @redux/toolkit
-        and will give it 
-        name:
-        intialState{
-          items:[]
-        },
-        then we will gove reducers
-          reducer:{
-            addItem : (state,action)=>{
-              state.items.push(action.payload)
-            },
-            remove item:......,
-            clearCart:.......
-          }
-  export actions , export reducers
+   4. we will create a slice
+      create using createSlice from @redux/toolkit
+      and will give it
+      name:
+      intialState{
+      items:[]
+      },
+      then we will gove reducers
+      reducer:{
+      addItem : (state,action)=>{
+      state.items.push(action.payload)
+      },
+      remove item:......,
+      clearCart:.......
+      }
+      export actions , export reducers
 
-5) then we will import the reducer to the store 
-    then we will make the cart reducer  to  the store reducer 
+5) then we will import the reducer to the store
+   then we will make the cart reducer to the store reducer
+6) If we want to diaplay or take the data from the redux item we uses the Subscription by the useSelector hook by const
+   cart = useSelector((store)=>store.cart.items)
+7) If we want to pass the data we uses the useDispatch hook and giving the action.payload in it
