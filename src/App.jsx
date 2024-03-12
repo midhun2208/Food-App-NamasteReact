@@ -18,7 +18,9 @@ import UserContext from "./Utils/UserContext";
 
 const Grocery = lazy(() => import("./Components/Grocery"));
 
-const About = lazy(()=>import("./Components/About"));
+const About = lazy(()=>import("./Components/About"))
+import {Provider} from 'react-redux';
+import appStore from "./Utils/appStore";
 
 
 
@@ -34,12 +36,15 @@ const AppLayout = () => {
 
   return (
     // the conetxt dependes upon where we are using or wrapping the things
-    <UserContext.Provider value={{ loggedInUser: userName, setUserName}}>
+    //we have Provided the appStore using Provider
+   <Provider store={appStore}>
+     <UserContext.Provider value={{ loggedInUser: userName, setUserName}}>
       <div className="App">
         <Header />
         <Outlet />
       </div>
     </UserContext.Provider>
+   </Provider>
   );
 };
 

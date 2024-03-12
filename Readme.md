@@ -175,31 +175,65 @@ Lazy loading - loading the component bubler when on it demands in the loading it
 Demand Loading - Loading only when it is needed
 
 # Higher Order Components
+
 One component that takes a compoenent and enhance the compoenet and returns the enhanced component
 
 # Controlled And UnControlled Components
-  When the component have its own state then the Component is called UnControlled Component
 
-  when the parent component have the state management of the Child component then it is called a controlled Component(child)
+When the component have its own state then the Component is called UnControlled Component
+
+when the parent component have the state management of the Child component then it is called a controlled Component(child)
 
 # State Lifting
-  when there is parent and a child component the parent component is controlling the satet of the child the state is being lifted
+
+when there is parent and a child component the parent component is controlling the satet of the child the state is being lifted
 
 # props drilling
- when the parent passes a data to  a child and  after that next child needs the data we have pass next props to get the data in the next child 
-this is  known as the props drilling concept . If it is a big application we can't pass the props like this it will be so hard
+
+when the parent passes a data to a child and after that next child needs the data we have pass next props to get the data in the next child
+this is known as the props drilling concept . If it is a big application we can't pass the props like this it will be so hard
 to resoluve this problem the Ract has ReactContext .
 
 # React Context
+
 it is like a global space we can acces the data anywhere in the Component by using useContext(Context_name)
 we Can create by using createContext({})
-they are in functional components 
+they are in functional components
 IN Class Based Components
-  we USes the Component Name and the Consumer key  and a callBack funtion in it and returns a jsx like
-    <!-- <UserConetxt.Consumer>{(data)=><>{data.loggInUser}</>} -->
+we USes the Component Name and the Consumer key and a callBack funtion in it and returns a jsx like
 
-  in the COntext there is a provider  with that we cann update the value in the Context 
-  <UserContext.Provider value={loggIn:data>
-    <!-- Wrap the conents that the COntext want to change in it and -->
-   </UserContext.Provider> 
+<!-- <UserConetxt.Consumer>{(data)=><>{data.loggInUser}</>} -->
 
+in the COntext there is a provider with that we cann update the value in the Context
+<UserContext.Provider value={loggIn:data>
+
+<!-- Wrap the conents that the COntext want to change in it and -->
+
+</UserContext.Provider>
+
+# React-Redux
+
+1. We want to install the libarary @redux/toolkil and react-redux
+   npm i @reduxjs/toolkit , npm i react-redux
+    2) Build Our store using the configureStore ({})
+     3) then we will provide it by using the <Provider store={appStore}></Provider>
+
+     4) we will create  a slice 
+        create using createSlice from @redux/toolkit
+        and will give it 
+        name:
+        intialState{
+          items:[]
+        },
+        then we will gove reducers
+          reducer:{
+            addItem : (state,action)=>{
+              state.items.push(action.payload)
+            },
+            remove item:......,
+            clearCart:.......
+          }
+  export actions , export reducers
+
+5) then we will import the reducer to the store 
+    then we will make the cart reducer  to  the store reducer 
