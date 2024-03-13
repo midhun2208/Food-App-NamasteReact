@@ -7,6 +7,9 @@ import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestMenu from "./Components/RestMenu";
 import UserContext from "./Utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./Utils/appStore";
+import Cart from "./Components/Cart";
 
 // not using keys(not recommened) <<<<<<< index as a key <<<<<<<< unique id (best parctice)
 
@@ -19,8 +22,9 @@ import UserContext from "./Utils/UserContext";
 const Grocery = lazy(() => import("./Components/Grocery"));
 
 const About = lazy(()=>import("./Components/About"))
-import {Provider} from 'react-redux';
-import appStore from "./Utils/appStore";
+
+
+
 
 
 
@@ -37,14 +41,15 @@ const AppLayout = () => {
   return (
     // the conetxt dependes upon where we are using or wrapping the things
     //we have Provided the appStore using Provider
-   <Provider store={appStore}>
+    <Provider store={appStore}>
      <UserContext.Provider value={{ loggedInUser: userName, setUserName}}>
       <div className="App">
         <Header />
         <Outlet />
       </div>
     </UserContext.Provider>
-   </Provider>
+    </Provider>
+
   );
 };
 
@@ -81,6 +86,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/resturants/:resId",
         element: <RestMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart/>,
       },
     ],
   },

@@ -11,8 +11,9 @@ const Header = () => {
   const onlineStatus = useOnlineStatus()
   const {loggedInUser} = useContext(UserContext)
   // console.log(loggedInUser);
-  const cart = useSelector((store)=>store.cart.items)
+
   // console.log(cart);
+  const cart = useSelector((state)=>state.cart.items)
 
   return (
     <div className="flex justify-between shadow-xl sm:bg-gray-100 lg:bg-green-50">
@@ -25,7 +26,7 @@ const Header = () => {
           <li className="px-4"><Link to={'/'} >Home</Link></li>
           <li className="px-4"><Link to='/about'>About us</Link></li>
           <li className="px-4"><Link to='contact'>Contact us</Link></li>
-          <li className="px-4 font-bold text-xl"> Cart {cart.length}-Items</li>
+          <li className="px-4 font-bold text-xl"> <Link to={'/cart'}>Cart {cart?.length}-Items</Link></li>
           <li className="px-4"><Link to='/grocery'>Grocery</Link></li>
           <button
             className="btn-login"
