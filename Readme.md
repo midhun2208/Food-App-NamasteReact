@@ -238,3 +238,5 @@ in the COntext there is a provider with that we cann update the value in the Con
 6) If we want to diaplay or take the data from the redux item we uses the Subscription by the useSelector hook by const
    cart = useSelector((store)=>store.cart.items)
 7) If we want to pass the data we uses the useDispatch hook and giving the action.payload in it
+
+r
