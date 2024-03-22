@@ -239,4 +239,19 @@ in the COntext there is a provider with that we cann update the value in the Con
    cart = useSelector((store)=>store.cart.items)
 7) If we want to pass the data we uses the useDispatch hook and giving the action.payload in it
 
-r
+# Ep- 13
+
+# Types of testing(developer can do)
+
+-unit testing
+-integration-testin
+-End-to-End testing
+
+2. # Setting up testing
+   -Install the testing libaray npm i -D @testing-library/react
+   -Install the jests that the react testing libaray uses it
+   because of using bable we have to install the package that says
+   Using bables
+   -npm install --save-dev babel-jest @babel/core @babel/preset-env
+   -Configure babel using the file name babel.config.js
+   -Configure parcel config file to disable defualt babe transpilation

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Food ordering app",
   "scripts": {
-    "test": "jezt",
+    "test": "jest",
     "start": "npx parcel index.html",
     "build": "npx parcel build index.html"
   },
@@ -18,6 +18,10 @@
     "react-router-dom": "^6.22.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@testing-library/react": "^14.2.2",
+    "babel-jest": "^29.7.0",
     "postcss": "^8.4.35",
     "process": "^0.11.10",
     "tailwindcss": "^3.4.1"
