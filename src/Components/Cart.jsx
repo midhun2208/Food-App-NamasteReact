@@ -6,7 +6,7 @@ const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
-  if(cartItems.length == 0) return <h1 className="text-center text-3xl p-4 m-4">Add some items to the cart</h1>
+  if(cartItems.length == 0) return <h1 className="text-center text-3xl p-4 m-4">Add some items to the </h1>
 
   return (
     <>
