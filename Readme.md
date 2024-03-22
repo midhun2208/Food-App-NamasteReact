@@ -255,3 +255,9 @@ in the COntext there is a provider with that we cann update the value in the Con
    -npm install --save-dev babel-jest @babel/core @babel/preset-env
    -Configure babel using the file name babel.config.js
    -Configure parcel config file to disable defualt babe transpilation
+   -Jest Configuration --- npx jest --init
+   -Install jsdom (npm install --save-dev jest-environment-jsdom)
+
+ # creating files for tests
+    1)__tests__ =>dunder we uses 
+    2) sum.test.js => in that we have to use test("Comments",()=>{callback    with the funtion and the assertion if needed})
