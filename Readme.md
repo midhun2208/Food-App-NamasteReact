@@ -258,6 +258,12 @@ in the COntext there is a provider with that we cann update the value in the Con
    -Jest Configuration --- npx jest --init
    -Install jsdom (npm install --save-dev jest-environment-jsdom)
 
- # creating files for tests
-    1)__tests__ =>dunder we uses 
+# creating files for tests
+
+    1)__tests__ =>dunder we uses
     2) sum.test.js => in that we have to use test("Comments",()=>{callback    with the funtion and the assertion if needed})
+    3) install @babel/preset-react this libarry to make the jsx work in the test cases
+    4) Include the @babel/preset-react inside my babel config
+    5) Install nex libary @testing-libaray/jest-dom
+
+when we console log in the test case it will give a console log of Virtual Dom OBject and i is  also a jsx or a React element
