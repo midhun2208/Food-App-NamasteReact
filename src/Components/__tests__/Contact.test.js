@@ -7,7 +7,7 @@ describe("Test the Contact  Page ", () => {
     render(<Contact />);
 
     const heading = screen.getByRole("heading");
-
+    //Assertion
     expect(heading).toBeInTheDocument();
   });
   it("Should load the and find the button in the contact Component", () => {
@@ -17,14 +17,14 @@ describe("Test the Contact  Page ", () => {
 
     expect(button).toBeInTheDocument();
   });
-  test("Should load the and find the imput name in the contact Component", () => {
+  it("Should load the and find the imput name in the contact Component", () => {
     render(<Contact />);
 
     const input = screen.getByPlaceholderText("name");
 
     expect(input).toBeInTheDocument();
   });
-  test("Should load the 2 input boxes on the COntact Component", () => {
+  it("Should load the 2 input boxes on the COntact Component", () => {
     render(<Contact />);
 
     const inputs = screen.getAllByRole("textbox");
