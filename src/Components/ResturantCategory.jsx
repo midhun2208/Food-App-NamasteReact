@@ -16,7 +16,7 @@ const ResturantCategory = ({ data, showItem, setShowIndex }) => {
           <span className="font-bold text-lg">
             {data?.title} ({data?.itemCards.length})
           </span>
-          <span>⬇️</span>
+          {showItem ?<span>⬆️</span> :<span>⬇️</span>}
         </div>
        {showItem &&  <ItemList items={data?.itemCards} /> }
       </div>
