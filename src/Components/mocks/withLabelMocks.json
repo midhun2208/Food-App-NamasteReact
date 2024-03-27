@@ -1,0 +1,71 @@
+{
+    "info": {
+        "id": "379730",
+        "name": "Grameen Kulfi",
+        "cloudinaryImageId": "hlxeqq2wy1xiqnfcyddb",
+        "locality": "Parambithara Road",
+        "areaName": "Panampilly Nagar",
+        "costForTwo": "₹120 for two",
+        "cuisines": [
+            "Ice Cream",
+            "Desserts"
+        ],
+        "avgRating": 4.8,
+        "veg": true,
+        "parentId": "12175",
+        "avgRatingString": "4.8",
+        "totalRatingsString": "500+",
+        "sla": {
+            "deliveryTime": 25,
+            "lastMileTravel": 5.5,
+            "serviceability": "SERVICEABLE",
+            "slaString": "20-25 mins",
+            "lastMileTravelString": "5.5 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-03-28 00:00:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "EVERY ITEM",
+            "subHeader": "@ ₹99"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {
+        "context": "seo-data-c57f21fe-f415-41c5-8971-e529034cdeab"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/grameen-kulfi-parambithara-road-panampilly-nagar-kochi-379730",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}
