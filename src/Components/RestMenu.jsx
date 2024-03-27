@@ -12,16 +12,16 @@ const RestMenu = () => {
   if (restInfo === null) return <Shimmer />;
 
   const { name, cuisines, costForTwoMessage } =
-    restInfo?.cards[0]?.card?.card?.info;
+    restInfo?.cards[2]?.card?.card?.info;
 
   const { itemCards } =
-    restInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card
+    restInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
       ?.card;
 
   // console.log(restInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
   // for the category like recommed and all  filterMethod
   const category =
-    restInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    restInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
