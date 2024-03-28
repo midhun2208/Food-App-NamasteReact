@@ -9,16 +9,16 @@ import "@testing-library/jest-dom";
 it("Should render the RestCard Component with the propos data", ()=>{
     render(<RestroCard resData={MOCK_DATA} />)
 
-   const name =  screen.getByText("Chinese Wok")
+   const name =  screen.getByText("Hotel Aryaas Park")
 
    expect(name).toBeInTheDocument()
 
 })
 
-// it("Should render the compinent with the promoted label ", ()=>{
-//   render(<withOpenTag resData={MOCK_DATA2}  />)
+it("Should render the component with the promoted label ", ()=>{
+  render(withOpenTag (<RestroCard resData={MOCK_DATA2}  />))
 
-//   const lable = screen.getByText("Veg")
-//   expect(lable).toBeInTheDocument()
+  const lable = screen.getByLabel("Veg")
+  expect(lable).toBeInTheDocument()
 
-// })
+})

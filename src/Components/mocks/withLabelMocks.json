@@ -1,45 +1,60 @@
 {
     "info": {
-        "id": "379730",
-        "name": "Grameen Kulfi",
-        "cloudinaryImageId": "hlxeqq2wy1xiqnfcyddb",
-        "locality": "Parambithara Road",
+        "id": "78317",
+        "name": "Hotel Aryaas Park",
+        "cloudinaryImageId": "eo5cam4g7jl9efr5vjpn",
+        "locality": "Mig Housing Society",
         "areaName": "Panampilly Nagar",
-        "costForTwo": "₹120 for two",
+        "costForTwo": "₹250 for two",
         "cuisines": [
-            "Ice Cream",
-            "Desserts"
+            "South Indian"
         ],
-        "avgRating": 4.8,
+        "avgRating": 4.6,
         "veg": true,
-        "parentId": "12175",
-        "avgRatingString": "4.8",
-        "totalRatingsString": "500+",
+        "parentId": "20778",
+        "avgRatingString": "4.6",
+        "totalRatingsString": "10K+",
         "sla": {
-            "deliveryTime": 25,
-            "lastMileTravel": 5.5,
+            "deliveryTime": 36,
+            "lastMileTravel": 5,
             "serviceability": "SERVICEABLE",
-            "slaString": "20-25 mins",
-            "lastMileTravelString": "5.5 km",
+            "slaString": "35-40 mins",
+            "lastMileTravelString": "5.0 km",
             "iconType": "ICON_TYPE_EMPTY"
         },
         "availability": {
-            "nextCloseTime": "2024-03-28 00:00:00",
+            "nextCloseTime": "2024-03-28 22:00:00",
             "opened": true
         },
-        "badges": {},
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "v1695133679/badges/Pure_Veg111.png",
+                    "description": "pureveg"
+                }
+            ]
+        },
         "isOpen": true,
         "type": "F",
         "badgesV2": {
             "entityBadges": {
-                "imageBased": {},
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "pureveg",
+                                "imageId": "v1695133679/badges/Pure_Veg111.png"
+                            }
+                        }
+                    ]
+                },
                 "textBased": {},
                 "textExtendedBadges": {}
             }
         },
         "aggregatedDiscountInfoV3": {
-            "header": "EVERY ITEM",
-            "subHeader": "@ ₹99"
+            "header": "10% OFF",
+            "subHeader": "UPTO ₹40"
         },
         "orderabilityCommunication": {
             "title": {},
@@ -60,10 +75,10 @@
         "restaurantOfferPresentationInfo": {}
     },
     "analytics": {
-        "context": "seo-data-c57f21fe-f415-41c5-8971-e529034cdeab"
+        "context": "seo-data-6547aaaf-2c23-4a8b-a9d2-775d1dde3957"
     },
     "cta": {
-        "link": "https://www.swiggy.com/restaurants/grameen-kulfi-parambithara-road-panampilly-nagar-kochi-379730",
+        "link": "https://www.swiggy.com/restaurants/hotel-aryaas-park-mig-housing-society-panampilly-nagar-kochi-78317",
         "text": "RESTAURANT_MENU",
         "type": "WEBLINK"
     },

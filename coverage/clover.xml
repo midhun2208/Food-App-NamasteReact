@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1711561043588" clover="3.2.0">
-  <project timestamp="1711561043588" name="All files">
-    <metrics statements="39" coveredstatements="32" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="8" elements="58" coveredelements="42" complexity="0" loc="39" ncloc="39" packages="2" files="9" classes="9"/>
+<coverage generated="1711599671230" clover="3.2.0">
+  <project timestamp="1711599671230" name="All files">
+    <metrics statements="39" coveredstatements="33" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="9" elements="58" coveredelements="44" complexity="0" loc="39" ncloc="39" packages="2" files="9" classes="9"/>
     <package name="Components">
-      <metrics statements="20" coveredstatements="18" conditionals="4" coveredconditionals="2" methods="8" coveredmethods="6"/>
+      <metrics statements="20" coveredstatements="19" conditionals="4" coveredconditionals="2" methods="8" coveredmethods="7"/>
       <file name="Contact.jsx" path="D:\React\Namaste-React\FoodOrdering-App\src\Components\Contact.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -20,7 +20,7 @@
         <line num="34" count="1" type="cond" truecount="1" falsecount="1"/>
       </file>
       <file name="RestroCard.jsx" path="D:\React\Namaste-React\FoodOrdering-App\src\Components\RestroCard.jsx">
-        <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -28,7 +28,7 @@
         <line num="17" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
       </file>
       <file name="sum.js" path="D:\React\Namaste-React\FoodOrdering-App\src\Components\sum.js">
