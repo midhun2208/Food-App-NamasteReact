@@ -7,7 +7,7 @@ import appStore from "../../Utils/appStore";
 import "@testing-library/jest-dom";
 import Header from "../Header";
 import { BrowserRouter } from "react-router-dom";
-import Cart from '../Cart'
+import Cart from "../Cart";
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
@@ -22,7 +22,7 @@ it("Should load the rest menu Component", async () => {
         <Provider store={appStore}>
           <Header />
           <RestMenu />
-          <Cart/>
+          <Cart />
         </Provider>
       </BrowserRouter>
     )
@@ -41,6 +41,10 @@ it("Should load the rest menu Component", async () => {
 
   expect(screen.getByText("Cart 1-Items")).toBeInTheDocument();
 
-  expect(screen.getAllByTestId("foodItems").length).toBe(21)
+  expect(screen.getAllByTestId("foodItems").length).toBe(21);
+
+  fireEvent.click(screen.getByRole("button",{name:"Clear-Cart"}))
+
+  expect(screen.getAllByTestId("foodItems").length).toBe(20)
 
 });
