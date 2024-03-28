@@ -17,7 +17,7 @@ const RestroCard = (props) => {
   const { deliveryTime } = resData.info.sla;
 
   return (
-    <div className="m-4 p-4 w-[270px] rounded-lg bg-gray-100 hover:bg-gray-300">
+    <div data-testid= "resCards" className="m-4 p-4 w-[270px] rounded-lg bg-gray-100 hover:bg-gray-300" >
       <img
         src={CDN_URL + cloudinaryImageId}
         alt="res-logo"
