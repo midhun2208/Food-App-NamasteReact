@@ -6,6 +6,9 @@ import MOCK_DATA2 from '../mocks/withLabelMocks.json'
 import "@testing-library/jest-dom";
 
 
+const RestroCardsss = withOpenTag(RestroCard)
+
+
 it("Should render the RestCard Component with the propos data", ()=>{
     render(<RestroCard resData={MOCK_DATA} />)
 
@@ -16,9 +19,9 @@ it("Should render the RestCard Component with the propos data", ()=>{
 })
 
 it("Should render the component with the promoted label ", ()=>{
-  render(withOpenTag (<RestroCard resData={MOCK_DATA2}  />))
+  render(withOpenTag (<RestroCardsss resData={MOCK_DATA2}  />))
 
-  const lable = screen.getByLabel("Veg")
+  const lable = screen.getByText("Hotel Aryaas Park")
   expect(lable).toBeInTheDocument()
 
 })

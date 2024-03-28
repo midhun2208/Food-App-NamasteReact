@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1711599671230" clover="3.2.0">
-  <project timestamp="1711599671230" name="All files">
+<coverage generated="1711601151814" clover="3.2.0">
+  <project timestamp="1711601151814" name="All files">
     <metrics statements="39" coveredstatements="33" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="9" elements="58" coveredelements="44" complexity="0" loc="39" ncloc="39" packages="2" files="9" classes="9"/>
     <package name="Components">
       <metrics statements="20" coveredstatements="19" conditionals="4" coveredconditionals="2" methods="8" coveredmethods="7"/>
@@ -28,7 +28,7 @@
         <line num="17" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
       </file>
       <file name="sum.js" path="D:\React\Namaste-React\FoodOrdering-App\src\Components\sum.js">
