@@ -70,6 +70,7 @@ const Body = () => {
           <button
             className="px-4 py-4 bg-gray-100  rounded-lg"
             onClick={() => {
+              console.log("hi");
               const filteredList = listOfRest.filter(
                 (res) => res.info.avgRating > 4.3
               );
